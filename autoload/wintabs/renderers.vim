@@ -100,7 +100,7 @@ function! wintabs#renderers#padding(len)
 endfunction
 
 function! wintabs#renderers#bufname(bufnr)
-  let name = fnamemodify(bufname(a:bufnr), 'p:h:t')
+  let name = fnamemodify(bufname(a:bufnr), ':p:h:t')
   let filename = fnamemodify(bufname(a:bufnr), ':t') 
   let name = substitute(name . "/" . filename, '%', '%%', 'g')
   if empty(name)
